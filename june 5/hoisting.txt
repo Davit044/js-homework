@@ -1,0 +1,47 @@
+What is hoisting in JS? Hoisting in JavaScript is a behavior where variable and function declarations are moved to the top of their scope during the compilation phase, before the code is executed. For Example  
+
+console.log(a);
+var a = 10;
+
+becouse of hoisting compiler will see it like this 
+
+var x;         // declaration is hoisted
+console.log(x); // undefined
+x = 5;         // assignment stays where it is
+
+it will be only with var type.  In case of let or const it will be a little bit otherways, For Example 
+
+console.log(y); 
+let y = 10;
+
+Here, hoisting still happens, but let and const are in a Temporal Dead Zone (TDZ) — a period from the start of the block until the declaration is encountered. Accessing them before declaration causes an error, referenceError: Cannot access 'y' before initialization
+
+TDZ - Temporal Dead Zone is the period of time during which a let, const is in scope but not yet declared. It is exists for avoiding undefined or unintended behavior.
+
+-Function hoisting:
+
+greet(); // "Hello!"
+function greet() {
+  console.log("Hello!");
+}
+
+Function declarations are fully hoisted — both name and body — so you can call them before they appear in the code.
+
+However function expressions are not fully hoisted:
+
+sayhello(); // TypeError: sayhello is not a function
+var sayhello = function () {
+  console.log("Hello!");
+};
+
+the variable sayhello is hoisted (as undefined), not the function itself.
+
+| Declared with                  | Hoisted?       | Can use before declaration?   |
+| ------------------------------ | -------------- | ----------------------------- |
+| var                            | ✅             | ✅ (but value is undefined)   |
+| let, const                     | ✅             | ❌ (TDZ error)                |
+| function declaration           | ✅             | ✅                            |
+| function expression (with var) | ✅ (name only) | ❌                            |
+
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change button's text</title>
+</head>
+
+<body>
+
+    <button id="button1">Who are you?</button>
+
+    <script>
+
+
+        function changeButtonText() {
+            const button = document.getElementById('button1');
+            button.textContent = 'You are the best!';
+        }
+
+        document.getElementById('button1').addEventListener('click', changeButtonText);
+    </script>
+</body>
+
+</html>

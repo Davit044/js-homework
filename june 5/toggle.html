@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Visibility</title>
+</head>
+
+<body>
+    <p id="text">Picsart Academy </p>
+    <button id="BTN">Toggle button </button>
+
+    <script>
+
+        const Text = document.getElementById("text");
+        const button = document.getElementById('BTN');
+
+        button.addEventListener('click', function () {
+            if (Text.style.display === 'none') {
+                Text.style.display = 'block';
+            } else {
+                Text.style.display = 'none';
+            }
+        });
+
+    </script>
+</body>
+
+</html>

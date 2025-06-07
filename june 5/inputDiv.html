@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live input display</title>
+</head>
+
+<body>
+
+    <h2>Type something:</h2>
+    <input type="text" id="userInput" placeholder="Start typing...">
+    <div id="displayArea" style="margin-top: 30px; font-weight: bold;"></div>
+
+    <script>
+
+        const inputField = document.getElementById('userInput');
+        const displayDiv = document.getElementById('displayArea');
+
+        inputField.addEventListener('input', function () {
+            displayDiv.textContent = inputField.value;
+        });
+
+    </script>
+
+</body>
+
+</html>

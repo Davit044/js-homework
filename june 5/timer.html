@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        #countdown {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="startCountdown()">Start Countdown</button>
+    <div id="countdown">10</div>
+
+    <script>
+        let countdownValue = 10;
+        let intervalid = null;
+
+        function startCountdown() {
+            // Prevent multiple timers
+            if (intervalid !== null) return;
+
+            document.getElementById("countdown").textContent = countdownValue;
+
+            intervalid = setInterval(() => {
+                countdownValue--;
+                document.getElementById("countdown").textContent = countdownValue;
+
+                if (countdownValue === 0) {
+                    clearInterval(intervalid);
+                    intervalid = null;
+                    countdownValue = 10;
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+
+</html>
