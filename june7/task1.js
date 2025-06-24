@@ -6,7 +6,7 @@ Array.prototype.my_forEach = function (callback) {
     }
 }
 
-const array = [1, 2, 3, "banana", 5, 8, "close"];
+const arr = [1, 2, 3, "banana", 5, 8, "close"];
 
 array.my_forEach(function (val, index, arr) {
     console.log(`Value: ${val}, Index: ${index}, Array: [${arr}]`);
