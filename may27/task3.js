@@ -5,5 +5,4 @@ function sum(a, b) {
     return a + b;
 }
 
-let SUM = sum(a, b);
-console.log(SUM);
+console.log(sum(a, b));
