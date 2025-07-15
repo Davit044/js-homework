@@ -4,7 +4,7 @@ Array.prototype.my_filter = function (callback) {
 
     for (let i = 0; i < this.lenght; ++i) {
         if (callback(this[i], i, this)) {
-            result.push(callback(this[i], i, this));
+            result.push(this[i]);
         }
     }
     return result;
