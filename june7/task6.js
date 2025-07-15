@@ -1,6 +1,6 @@
-function my_IndexOf(arr, searchel, fromindex = 0) {
-    for (let i = fromindex; i < arr.length; i++) {
-        if (arr[i] === searchel) {
+Array.prototype.my_indexOf(searchel, fromindex = 0) {
+    for (let i = fromindex; i < this.length; i++) {
+        if (this[i] === searchel) {
             return i;
         }
     }
@@ -8,5 +8,5 @@ function my_IndexOf(arr, searchel, fromindex = 0) {
 }
 
 const arr = [3, 6, 9, 12];
-console.log(my_IndexOf(arr, 9));
-console.log(my_IndexOf(arr, 5));   
+console.log(arr.my_indexof(9));
+console.log(arr.my_indexOf(5));   
