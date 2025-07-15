@@ -1,8 +1,17 @@
+const str = "hello world";
 
-let str = "hello world";
+function up(str) {
+    return str.toUpperCase();
+}
 
-
-function upercase(str) {
-    let uppstr = str.toUpperCase();
-    return uppstr;
+function MyUp(str) {
+    let res = "";
+    for(let ch of str) {
+        if(ch >= 'a' && ch <= 'z') {
+            res += String.fromCharCode(ch.charCodeAt(0) - 32);
+        } else {
+            res += ch;
+          }
+    }
+    return res;
 }
