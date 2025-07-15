@@ -1,6 +1,6 @@
-function my_some(arr, callback) {
-    for (let i = 0; i < arr.length; i++) {
-        if (callback(arr[i], i, arr)) {
+Array.prototype.my_some(callback) {
+    for (let i = 0; i < this.length; i++) {
+        if (callback(this[i], i, this)) {
             return true;
         }
     }
@@ -8,7 +8,7 @@ function my_some(arr, callback) {
 }
 
 const arr = [1, 2, 3, 4];
-const evens = my_some(arr, function (num) {
+const have_even = arr.my_some(function (num) {
     return num % 2 === 0;
 });
-console.log(evens);
+console.log(have_even);
