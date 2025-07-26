@@ -11,7 +11,7 @@ console.log(s1 === s2);
 
 //2
 const key = Symbol.keyFor(s1);
-console.log(key); // "session"
+console.log(key);
 
 //3
 
